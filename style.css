@@ -74,7 +74,7 @@ form {
   padding: 40px 20px 0;
   margin-bottom: 30px;
   background: linear-gradient(180deg, rgba(20,25,51,0) 0%, rgba(20,25,51,0.75) 8%, rgba(20,25,51,0.88) 11%, rgba(20,25,51,1) 20%);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 fieldset {
@@ -88,6 +88,8 @@ legend {
 }
 
 input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -207,7 +209,6 @@ input {
 
 .seat,
 .legend-icon {
-  appearance: none;
   display: inline-block;
   width: 20px;
   height: 20px;
