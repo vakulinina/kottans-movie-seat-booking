@@ -38,6 +38,11 @@ h2 {
   font-weight: 600;
 }
 
+h3 {
+  color: #99a3bc;
+  font-size: 16px;
+}
+
 p {
   color: #99a3bc;
   font-weight: 200;
@@ -62,6 +67,13 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+time {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100%;
 }
 
 .movie {
@@ -124,12 +136,21 @@ input {
   background-color: #75fd6f61;
 }
 
-.date-input:focus {
-  outline: none;
-  box-shadow: 0 3px 8px 2px #75fd6f61;
+.date-input:active {
+  box-shadow: 0 3px 8px 2px #76fd6f;
 }
 
-.day {
+.date-input:focus {
+  outline: none;
+  box-shadow: 0 3px 8px 2px #76fd6fcb;
+}
+
+.date-input:hover {
+  cursor: pointer;
+  background-color: #75fd6f61;
+}
+
+.week-day {
   margin: 0 0 auto 0;
   font-size: 1em;
 }
@@ -175,14 +196,20 @@ input {
   border-radius: 30px;
 }
 
-.time-input:checked {
+.time-input:checked,
+.time-input:active {
   border: 1px solid #75fd6f;
   background-color: #75fd6f61;
 }
 
 .time-input:focus {
   outline: none;
-  box-shadow: 0 3px 8px 2px #75fd6f61;
+  box-shadow: 0 3px 8px 2px #76fd6fcb;
+}
+
+.time-input:hover {
+  cursor: pointer;
+  background-color: #75fd6f61;
 }
 
 .hall {
@@ -212,6 +239,12 @@ input {
   height: 20px;
   border-radius: 5px;
   background-color: #3e4256;
+}
+
+.seat:hover,
+.seat:focus {
+  cursor: pointer;
+  background-color: #76fd6f80;
 }
 
 .seat:checked,
