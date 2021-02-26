@@ -69,6 +69,14 @@ input {
   appearance: none;
 }
 
+li {
+  line-height: 2em;
+}
+
+button {
+  cursor: pointer;
+}
+
 time {
   display: flex;
   flex-flow: column nowrap;
@@ -291,6 +299,47 @@ time {
   border-top: 2px solid #272a43;
 }
 
+.order-summary {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 47px;
+  margin: 0 auto 0 7%;
+}
+
+.tickets-number {
+  margin: 0 0 3px 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #99a3bc;
+  font-family: inherit;
+  font-size: 1em;
+  text-align: left;
+}
+
+.tickets-number:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.tickets-details {
+  position: absolute;
+  bottom: 55px;
+  width: 240px;
+  max-height: 340px;
+  margin: 0;
+  padding: 10%;
+  border-radius: 5px;
+  color: #99a3bc;
+  background-color: #262a43;
+  box-shadow: 0 0 7px 2px #0e1122;
+  font-size: 0.9em;
+  list-style: none;
+  overflow: auto;
+}
+
 .price {
   width: 150px;
   margin: 0;
@@ -302,6 +351,8 @@ time {
 .submit-button {
   width: 150px;
   height: 50px;
+  flex-shrink: 0;
+  margin: 0 7%;
   border: none;
   border-radius: 5px;
   background-color: #74ff6f;
@@ -312,6 +363,18 @@ time {
 .submit-button:hover {
   cursor: pointer;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 
 @media screen and (min-height: 820px) {
   body {
